@@ -4,7 +4,7 @@
 #include <iostream>
 #include <omp.h>                        // Librería para implementar la programación paralela
 
-#define N 1000                          // Cantidad de números a simar
+#define N 1000                          // Cantidad de números a sumar
 #define chunk 100                       // Tamaño del bloque a sumar en cada thread paralelo
 #define mostrar 10                      // Cantidad de resultados a mostrar en las funciones de impresión
 
@@ -15,7 +15,7 @@ int main()
 {
     #ifdef _OPENMP
         std::cout << "\nCon OPENMP\n";  // Código para verificar que podemos usar  OpenMP
-#endif
+    #endif
 
     std::cout << "\nSumando Arreglos en Paralelo!\n";
     float a[N], b[N], c[N];
@@ -30,7 +30,8 @@ int main()
     int pedazos = chunk;                // guardo en 'pedazos' la cantidad de números a procesar en cada thread
 
     // En la definición de los threads, Las variables a,b,c son compartidas, i es privada para cada hilo
-    // Divide las iteraciones del for en bloque del tamaño pedazos, y con static les asigna de antemano los pedazos a los diferentes hilos
+    // Divide las iteraciones del for en bloques del tamaño pedazos, y con static les asigna de antemano los pedazos 
+    //    a los diferentes hilos
     // Se indica que el procesamiento en paralelo se aplica para el for
     #pragma omp parallel for \
     shared(a, b, c, pedazos) private(i) \
@@ -81,15 +82,3 @@ void imprimeFinArreglo(float* d)
     std::cout << std::endl;
 }
 
-
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
