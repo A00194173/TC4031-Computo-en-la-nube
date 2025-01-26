@@ -1,0 +1,5 @@
+﻿  Tarea1ProgramParalela.cpp
+C:\Adriana\ITESM\Maestría\Trimestres\3 2025.01 - 03\TC4031 Cómputo en la nube\proyectosOMP\Tarea1ProgramParalela\Tarea1ProgramParalela\Tarea1ProgramParalela.cpp(26,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Adriana\ITESM\Maestría\Trimestres\3 2025.01 - 03\TC4031 Cómputo en la nube\proyectosOMP\Tarea1ProgramParalela\Tarea1ProgramParalela\Tarea1ProgramParalela.cpp(28,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Adriana\ITESM\Maestría\Trimestres\3 2025.01 - 03\TC4031 Cómputo en la nube\proyectosOMP\Tarea1ProgramParalela\Tarea1ProgramParalela\Tarea1ProgramParalela.cpp(22,9): warning C4101: 'i': unreferenced local variable
+  Tarea1ProgramParalela.vcxproj -> C:\Adriana\ITESM\Maestría\Trimestres\3 2025.01 - 03\TC4031 Cómputo en la nube\proyectosOMP\Tarea1ProgramParalela\x64\Debug\Tarea1ProgramParalela.exe
